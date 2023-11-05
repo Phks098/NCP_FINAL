@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.Education_identity_test_score">
+	<resultMap type="Education_identity_test_score_VO"
+		id="professor_education_identity_test_Result">
+		<result property="university_number" column="university_number" />
+		<result property="test_category" column="test_category" />
+		<result property="category_everage" column="category_everage" />
+		<result property="professor_category_everage"
+			column="professor_category_everage" />
+	</resultMap>
+
+
+
+	<select id="select_Education_identity_test_score"
+		parameterType="String"
+		resultMap="professor_education_identity_test_Result">
+		select * from Professor_education_identity_test where
+		university_number =
+		#{university_number}
+	</select>
+
+	<select id="selectProfessor"
+		resultMap="professor_education_identity_test_Result"
+		parameterType="String">
+		select student.university_number,category.category_name,
+		score.category_everage,professor.evaluation_grade
+		from
+		education_identity_test_score as score
+		left join identity_test_category
+		as category on category.category_number =
+		score.test_category
+		left join
+		professor_education_identity_test as professor
+		on
+		professor.university_number =score.university_number and
+		professor.test_category=score.test_category
+		right join student on student.university_number = score.university_number
+		where
+		student.Professor_number = #{Professor_number}
+	</select>
+
+
+	<insert id="insert" parameterType="java.util.Map">
+		insert into education_identity_test_score values
+		<foreach collection="list" index="index" item="item"
+			separator=",">
+			(#{item.university_number},
+			#{item.test_category},#{item.category_everage},#{item.professor_category_everage})
+		</foreach>
+	</insert>
+
+	<delete id="delete" parameterType="String">
+
+		delete from
+		Education_identity_test_score where university_number =
+		#{university_number}
+
+	</delete>
+
+
+</mapper>

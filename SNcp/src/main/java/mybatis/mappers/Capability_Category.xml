@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.capability_category">
+	<resultMap id="capability_category_Result" type="Capability_category_VO">
+		<result column="capability_number" property="capability_number" />
+		<result column="capability_name" property="capability_name" />
+	</resultMap>
+	
+	<!-- 역량 분류 -->
+	<select id="selectAll" resultMap="capability_category_Result"	>
+	<![CDATA[
+		select *
+		from capability_category;
+	]]>
+	</select>
+	
+</mapper>

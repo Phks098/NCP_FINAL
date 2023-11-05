@@ -1,0 +1,22 @@
+import java.util.List;
+
+import data.Reco;
+import data.dao.Student_DAO;
+import rlogic.Rlogic;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Rlogic logic = new Rlogic();
+		Student_DAO dao = new Student_DAO();
+		System.out.println("테스트 결과=============================");
+		 List<List<Reco>> result =logic.getReco("201811015");
+		 
+		
+		
+		
+		
+	}
+
+}

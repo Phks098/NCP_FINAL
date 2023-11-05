@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.diagnosis">
+
+	<resultMap type="Diagnosis_criteria_VO"
+		id="diagnosis_criteria">
+		<result property="capability_category"
+			column="capability_category" />
+		<result property="high_max" column="high_max" />
+		<result property="high_min" column="high_min" />
+		<result property="normal_max" column="normal_max" />
+		<result property="normal_min" column="normal_min" />
+		<result property="low_max" column="low_max" />
+		<result property="low_min" column="low_min" />
+	</resultMap>
+	
+	
+	<select id="selectAll" resultMap="diagnosis_criteria">
+	select * from diagnosis_criteria
+	</select>
+	
+	<delete id="deleteAll">
+	delete from diagnosis_criteria
+	</delete>
+	
+	<insert id="insert" parameterType="java.util.Map">
+		insert into diagnosis_criteria values
+		<foreach collection="list" index="index" item="item"
+			separator=",">
+			(#{item.capability_category},#{item.high_max},#{item.high_min},#{item.normal_max},#{item.normal_min},#{item.low_max},#{item.low_min})
+		</foreach>
+	</insert>
+
+
+</mapper>

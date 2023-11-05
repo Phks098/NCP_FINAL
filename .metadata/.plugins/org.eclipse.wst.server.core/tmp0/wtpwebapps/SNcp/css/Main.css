@@ -1,0 +1,411 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+div {
+  box-sizing: border-box;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.page_toparea {
+  width: 100%;
+
+  display: block;
+  position: relative;
+  padding-bottom: 150px;
+  padding-left: 224px;
+  padding-right: 224px;
+  padding-top: 10px;
+
+  background: #c1dcff
+    url(https://semsplus.seowon.ac.kr/contents/images/client/main/bg_mainvisual.png)
+    no-repeat center;
+  background-size: cover;
+}
+.header_wrap {
+  display: block;
+}
+.header_top {
+  width: 100%;
+  position: relative;
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn_login {
+  background-color: transparent;
+  width: 112px;
+  height: 32px;
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 40px;
+
+  justify-content: center;
+  align-items: center;
+}
+.btn_login div i,
+p {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.btn_login:hover {
+  background-color: #0f298f;
+  cursor: pointer;
+}
+.btn_login:hover div i,
+.btn_login:hover div p {
+  color: #fff;
+}
+.btn_logout {
+  background-color: transparent;
+  width: 112px;
+  height: 32px;
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 40px;
+
+  justify-content: center;
+  align-items: center;
+}
+.btn_logout div i,
+p {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.btn_logout:hover {
+  background-color: #0f298f;
+  cursor: pointer;
+}
+.btn_logout:hover div i,
+.btn_logout:hover div p {
+  color: #fff;
+}
+.seowon_logo {
+  width: 167.09px;
+  height: 50px;
+  object-fit: cover;
+}
+.seowon_logo:hover {
+  cursor: pointer;
+}
+.btn_sitemap {
+  width: 32px;
+  height: 32px;
+  background-color: #4163af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.btn_sitemap:hover {
+  cursor: pointer;
+}
+.btn_sitemap i {
+  color: #fff;
+}
+.header_bottom {
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px;
+  width: 100%;
+}
+.menu_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.menu_list li {
+  position: relative;
+}
+.top_menu {
+  display: block;
+  color: #3a3a37;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+.top_menu::before {
+  content: "";
+  display: block;
+  margin: 0 auto 6px;
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.menu_list li a {
+  text-decoration: none;
+}
+.menu_list li a:hover {
+  cursor: pointer;
+}
+.menu_list li:nth-child(1) a::before {
+  background-color: #435991;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb01.png);
+}
+.menu_list li:nth-child(2) a::before {
+  background-color: #f87f2d;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb02.png);
+}
+.menu_list li:nth-child(3) a::before {
+  background-color: #05a8cd;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb03.png);
+}
+.menu_list li:nth-child(4) a::before {
+  background-color: #5f86d6;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb04.png);
+}
+.menu_list li:nth-child(5) a::before {
+  background-color: #a3cd61;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb05.png);
+}
+.menu_list li:nth-child(6) a::before {
+  background-color: #0e81b8;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb06.png);
+}
+.menu_list li:nth-child(7) a::before {
+  background-color: #3691de;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb07.png);
+}
+.menu_list li:nth-child(8) a::before {
+  background-color: #d94d4d;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb08.png);
+}
+.menu_list li:nth-child(9) a::before {
+  background-color: #3ab392;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb09.png);
+}
+
+.visual_wrapper {
+  position: relative;
+  width: 100%;
+  margin: 26px 0 26px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.visual_area {
+  width: 100%;
+  align-content: space-around;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  height: 155px;
+}
+.visual_text {
+  display: inline;
+  color: #013277;
+  font-size: 24px;
+  font-weight: 600;
+}
+.visual_text img {
+  display: block;
+  width: 482px;
+  object-fit: cover;
+  margin: 10px 0 10px;
+}
+.visual_text p {
+  display: block;
+  color: #3a3a3a;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  margin-bottom: 20px;
+}
+.visual_text dl dt {
+  margin-bottom: 14px;
+  color: #013277;
+  font-size: 22px;
+}
+.visual_text dl dd {
+  color: #013277;
+  font-size: 16px;
+  font-weight: 400;
+}
+.visual_image {
+  padding: 0;
+}
+
+/* 사이트맵 팝업 */
+.sitemap_popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.sitemap_popup.show {
+  display: block;
+}
+.sitemap_popup_body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+}
+
+.sitemap_wrapper {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.sitemap_header {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 3px);
+  padding: 10px 20px;
+  padding-left: 20px;
+  min-height: 60px;
+  color: #fff;
+  background: #2e4e87;
+  border-radius: 5px 5px 0 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.sitemap_header .sitemap_close {
+  width: 20px;
+  height: 20px;
+  background: url(https://semsplus.seowon.ac.kr/contents/images/client/popup/btn_pop_close.png)
+    center center no-repeat;
+  background-size: contain;
+}
+.sitemap_header .sitemap_close:hover {
+  cursor: pointer;
+}
+
+.sitemap_content {
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px;
+  min-height: 100px;
+}
+.sitemap_inner {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+.sitemap_list {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 2%;
+  margin-bottom: 30px;
+  width: 22%;
+  color: #3a3a3a;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  vertical-align: top;
+}
+.sitemap_list h2 {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 49px;
+  padding-bottom: 10px;
+  font-family: GyeonggiTitle, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 40px;
+  border-bottom: 1px solid #eaeff4;
+  text-align: left;
+}
+.sitemap_list > ul {
+  margin: 0;
+  padding: 6px 0;
+  background: #fbfbfb;
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.sitemap_list > ul > li {
+  margin-bottom: 5px;
+}
+.sitemap_list > ul > li:hover {
+  color: rgb(20, 52, 235);
+  font-weight: 700;
+}
+.sitemap_list.sitemap_list1 > h2::before {
+  background-color: #435991;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb01.png);
+}
+.sitemap_list.sitemap_list2 > h2::before {
+  background-color: #f87f2d;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb02.png);
+}
+.sitemap_list.sitemap_list3 > h2::before {
+  background-color: #05a8cd;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb03.png);
+}
+.sitemap_list.sitemap_list4 > h2::before {
+  background-color: #5f86d6;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb04.png);
+}
+.sitemap_list.sitemap_list5 > h2::before {
+  background-color: #a3cd61;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb05.png);
+}
+.sitemap_list.sitemap_list6 > h2::before {
+  background-color: #0e81b8;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb06.png);
+}
+.sitemap_list.sitemap_list7 > h2::before {
+  background-color: #3691de;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb07.png);
+}
+.sitemap_list.sitemap_list8 > h2::before {
+  background-color: #d94d4d;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb08.png);
+}
+.sitemap_list.sitemap_list9 > h2::before {
+  background-color: #3ab392;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/common/icon_gnb09.png);
+}
+.sitemap_list.sitemap_list10 > h2::before {
+  background-color: #b33aa9;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/sub/icon_capa6.png);
+}
+.sitemap_list.sitemap_list11 > h2::before {
+  background-color: #5e3ab3;
+  background-image: url(https://semsplus.seowon.ac.kr/contents/images/client/sub/icon_capa4.png);
+}
+.sitemap_list > h2::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 14px;
+}

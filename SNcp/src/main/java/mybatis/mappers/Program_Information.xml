@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.program_information">
+
+	<resultMap id="program_information_Result"
+		type="Program_Information_VO">
+		<result property="code" column="code" />
+		<result property="program_name" column="program_name" />
+		<result property="category_large" column="category_large" />
+		<result property="category_middle" column="category_middle" />
+		<result property="operating_type" column="operating_type" />
+		<result property="related_NCS_part" column="related_NCS_part" />
+		<result property="completating_time" column="completating_time" />
+		<result property="TALENT_capability" column="TALENT_capability" />
+		<!-- <result property="TALENT_reflection_rate" column="TALENT_reflection_rate" 
+			/> -->
+		<result property="previous_program" column="previous_program" />
+		<result property="after_program" column="after_program" />
+		<result property="program_goal" column="program_goal" />
+		<result property="program_detail" column="program_detail" />
+	</resultMap>
+
+	<!-- 프로그램 기본 정보 전체 검색 -->
+	<select id="selectAll" resultMap="program_information_Result">
+	<![CDATA[
+		select *
+		from Program_Information
+	]]>
+	</select>
+
+	<!--
+	비교과 프로그램 기본 정보 검색
+	검색 키워드: 프로그램 코드 
+	-->
+	<select id="selectOne" resultMap="program_information_Result"
+		parameterType="String">
+      <![CDATA[  
+         select *
+		 from Program_Information
+		 where code = #{code}
+      ]]>
+	</select>
+	
+	<!--
+	비교과 프로그램 기본 정보 검색
+	검색 키워드: 프로그램 명 
+	-->
+	<select id="searchPrograms" resultMap="program_information_Result"
+		parameterType="String">
+      <![CDATA[  
+         SELECT *
+		 FROM Program_Information
+		 WHERE UPPER(program_name) LIKE CONCAT('%',#{program_name} ,'%')
+      ]]>
+	</select>
+
+	<!-- 비교과 프로그램 기본 정보 추가 -->
+	<insert id="insertOne"
+		parameterType="data.vo.Program_Information_VO">
+     	<![CDATA[
+     		insert ignore into program_information
+	     		(code, program_name, category_large, category_middle, 
+	     		operating_type, related_NCS_part, completation_time, 
+	     		TALENT_capability, previous_program, after_program, 
+	     		program_goal, program_detail) 
+     		values (#{code}, #{program_name}, #{category_large}, #{category_middle},
+	   			#{operating_type}, #{related_NCS_part}, #{completation_time}, 
+	   			#{TALENT_capability}, #{previous_program}, #{after_program}, 
+	   			#{program_goal}, #{program_detail})
+      	]]>
+	</insert>
+	
+	<!-- 비교과 프로그램 기본 정보 수정 -->
+	<update id="updateProgram"
+		parameterType="data.vo.Program_Information_VO">
+     	<![CDATA[
+     		update program_information
+	     	set code=#{code}, program_name=#{program_name}, category_large=#{category_large}, category_middle=#{category_middle}, 
+	     		operating_type=#{operating_type}, related_NCS_part=#{related_NCS_part}, completation_time=#{completation_time}, 
+	     		TALENT_capability=#{TALENT_capability}, previous_program=#{previous_program}, after_program=#{after_program}, 
+	     		program_goal=#{program_goal}, program_detail=#{program_detail}
+     		where code=#{code}
+      	]]>
+	</update>
+	
+	<!-- 비교과 프로그램 기본 정보 삭제 -->
+	<delete id="deleteProgram"
+		parameterType="String">
+     	<![CDATA[
+     		delete from program_information
+     		where code=#{code}
+      	]]>
+	</delete>
+	
+	<!-- 비교과 프로그램 기본 코드 최대값 검색 -->
+	<select id="maxProgramsCode" resultType="string" parameterType="String">
+     	<![CDATA[
+			SELECT MAX(CAST(CODE AS SIGNED INTEGER) - CAST(#{code} AS SIGNED INTEGER))
+			FROM PROGRAM_INFORMATION
+			WHERE CAST(CODE AS SIGNED INTEGER) BETWEEN CAST(#{code} AS SIGNED INTEGER) AND CAST(#{code} AS SIGNED INTEGER) + 999;
+      	]]>
+	</select>
+
+</mapper>

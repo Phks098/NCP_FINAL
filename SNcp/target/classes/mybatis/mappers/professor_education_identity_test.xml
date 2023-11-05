@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- property = 클래스의 변수 명입력 column = 데이터베이스 컬럼명입력해서 매칭한다. -->
+<mapper namespace="mapper.professor_education">
+	<resultMap type="Professor_education_identity_test_VO"
+		id="professor_education_identity_test_Result">
+		<result property="university_number" column="university_number" />
+		<result property="test_category" column="test_category" />
+		<result property="evaluation_grade" column="evaluation_grade" />
+		<result property="professor_number" column="professor_number" />
+		<result property="evaluation_date" column="evaluation_date" />
+	</resultMap>
+
+	<select id="select_professor_education_identity_test"
+		parameterType="String"
+		resultMap="professor_education_identity_test_Result">
+		select * from Professor_education_identity_test where
+		university_number =
+		#{university_number}
+	</select>
+
+
+	<insert id="insertAll" parameterType="java.util.Map">
+		insert into Professor_education_identity_test
+		values
+		<foreach collection="list" item="item" separator=",">
+
+			(#{item.university_number},#{item.test_category},#{item.evaluation_grade},#{item.professor_number},now())
+		</foreach>
+	</insert>
+	
+	<delete id="delete" parameterType="String">
+	delete from Professor_education_identity_test where university_number = #{university_number}
+	</delete>
+
+
+</mapper>

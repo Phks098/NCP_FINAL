@@ -1,0 +1,15 @@
+import java.util.List;
+
+import data.Reco;
+import data.dao.Category_DAO;
+import data.vo.NCS_Part_VO;
+import rlogic.Rlogic;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Rlogic logic = new Rlogic();
+	}
+
+}

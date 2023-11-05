@@ -1,0 +1,91 @@
+.searchFormZone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000000;
+}
+
+.searchFormZone .inner-left {
+  position: relative;
+  margin-left: 20px;
+  cursor: pointer;
+  align-items: center;
+}
+.searchFormZone .inner-left a {
+  display: block;
+  font-size: 17px;
+  font-weight: 900;
+  margin-right: 20px;
+}
+.searchFormZone .inner-left:hover {
+  color: #f87f2d;
+}
+.searchFormZone .inner-left i {
+  position: absolute;
+  font-size: 18px;
+  right: 0;
+  top: 50%;
+  transform: translate(0px, -8px);
+}
+
+.searchFormZone .inner-middle {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+
+.searchFormZone div input,
+button i {
+  font-size: 20px;
+}
+
+.searchFormZone div input[type="text"] {
+  width: 500px;
+  height: 50px;
+  border-radius: 1px;
+  padding: 5px 30px;
+}
+
+.searchFormZone div button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  top: 50%;
+  right: 4%;
+  transform: translate(0px, -10px);
+}
+
+/* 리스트 */
+.accordion {
+  display: none;
+  position: relative;
+}
+
+.accordion.show {
+  display: block;
+  position: relative;
+}
+
+ .accord div a {
+  display: inline;
+  float: right;
+  width: 100px;
+  height: 30px;
+  margin: 0 0 20px 10px;
+  border: 1px solid #3d93e4;
+  text-align: center;
+  line-height: 30px;
+}
+
+div a:hover{
+	background: #3d93e4;
+	color: #fff;
+}

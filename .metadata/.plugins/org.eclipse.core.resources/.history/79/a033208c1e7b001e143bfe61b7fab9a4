@@ -1,0 +1,21 @@
+import java.util.List;
+
+import data.Reco;
+import rlogic.Rlogic;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Rlogic test = new Rlogic();
+		List<List<Reco>> list = test.getReco("201811015");
+
+		if(list.isEmpty()) {
+			System.out.println(list.size());
+		}else {
+			System.out.println(list.size());
+		}
+		
+	}
+
+}

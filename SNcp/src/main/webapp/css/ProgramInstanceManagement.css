@@ -1,0 +1,202 @@
+/* 검색 존*/
+.searchFormZone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000000;
+}
+
+.searchFormZone .inner-left {
+  position: relative;
+  margin-left: 20px;
+  cursor: pointer;
+  align-items: center;
+}
+.searchFormZone .inner-left a {
+  display: block;
+  font-size: 17px;
+  font-weight: 900;
+  margin-right: 20px;
+}
+.searchFormZone .inner-left:hover {
+  color: #f87f2d;
+}
+.searchFormZone .inner-left i {
+  position: absolute;
+  font-size: 18px;
+  right: 0;
+  top: 50%;
+  transform: translate(0px, -8px);
+}
+
+.searchFormZone .inner-right {
+	display: inline-block;
+	align-items: center;
+}
+/*
+.searchFormZone .inner-middle {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+
+
+.searchFormZone div input,
+button i {
+  font-size: 20px;
+}
+
+.searchFormZone div input[type="text"] {
+  width: 500px;
+  height: 50px;
+  border-radius: 15px;
+  padding: 5px 30px;
+}
+
+.searchFormZone div button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  top: 50%;
+  right: 4%;
+  transform: translate(0px, -10px);
+}
+*/
+/* 리스트 */
+.accordion {
+  display: none;
+  position: relative;
+}
+
+.accordion.show {
+  display: block;
+  position: relative;
+}
+
+input[id*="pro"] {
+  display: none;
+}
+
+input[id*="pro"] + label {
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px solid #c1dcff;
+  color: #000000;
+  font-weight: 900;
+  font-size: 20px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+input[id*="pro"] + label + div {
+  box-sizing: border-box;
+  max-height: 0;
+  transition: all 0.35s;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+input[id*="pro"] + label i {
+  position: absolute;
+  right: 40px;
+  font-size: 20px;
+}
+
+input[id*="pro"]:checked + label {
+  background: #c1dcff;
+}
+
+input[id*="pro"]:checked + label + div {
+  max-height: 1500px;
+}
+
+input[id*="pro"]:checked + label i {
+  transform: rotate(180deg);
+}
+
+input[id*="pro"]:checked + label + div a {
+  display: inline;
+  float: right;
+  width: 100px;
+  height: 30px;
+  margin: 0 0 20px 10px;
+  border: 1px solid #3d93e4;
+  text-align: center;
+  line-height: 30px;
+}
+
+input[id*="pro"]:checked + label + div a:hover {
+  background: #3d93e4;
+  color: #fff;
+}
+
+/* 로딩 스피너 */
+.center {
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+.center.show {
+  display: flex;
+}
+
+.ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #3a93e5;
+  }
+  50% {
+    transform: rotate (180deg);
+    box-shadow: 1px 5px 2px #9080ca;
+  }
+  100% {
+    transform: rotate (360deg);
+    box-shadow: 1px 5px 2px #e570af;
+  }
+}
+.ring:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+span {
+  color: #737373;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 200px;
+}
+
+/*
+개설 이력 리스트
+*/
+.instList-item:hover{
+	background: rgb(250, 250, 250);
+}
