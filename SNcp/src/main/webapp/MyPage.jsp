@@ -228,7 +228,7 @@ request.setCharacterEncoding("utf-8");
 											<c:when
 											test="${preLevelsDesc[status.index].capability_category == 7}">실무역량</c:when>
 											<c:when
-											test="${preLevelsDesc[status.index].capability_category == 8}">실무역량</c:when>
+											test="${preLevelsDesc[status.index].capability_category == 8}">구직활동</c:when>
 										
 									</c:choose>
 									) 준비도:
