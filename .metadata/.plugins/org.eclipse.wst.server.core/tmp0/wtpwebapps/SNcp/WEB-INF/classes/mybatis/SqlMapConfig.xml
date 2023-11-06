@@ -28,7 +28,6 @@
 		<typeAlias type="data.Reco" alias="Reco" />
 		<typeAlias type="data.vo.Users_VO" alias="Users_VO" />
 
-
 		<typeAlias type="data.vo.Matching_criteria_VO" alias="Matching_criteria_VO" />
 		<typeAlias type="data.vo.Professor_weight_VO" alias="Professor_weight_VO" />
 		<typeAlias type="data.vo.Diagnosis_criteria_VO" alias="Diagnosis_criteria_VO" />
@@ -36,8 +35,8 @@
 		<typeAlias type="data.vo.Mypage_VO" alias="Mypage_VO" />
 		
 		<typeAlias type="data.vo.Education_identity_test_VO" alias="Education_identity_test_VO" />
+		<typeAlias type="data.vo.Professor_career_evaluation_VO" alias="Professor_career_evaluation_VO" />
 		
-
 
 	</typeAliases>
 
@@ -80,11 +79,12 @@
 		<!-- 역량검사 진로정체감 검사-->
 
 		<!-- 역량 평가 관련 계산 로직 파일이다. -->
-		<mapper resource="mybatis/mappers/Admin_Mode.xml" />
+		<mapper resource="mybatis/mappers/Admin_Mode.xml"/>
 		<mapper resource="mybatis/mappers/Education_Reasult_Get.xml" />
 		<mapper resource="mybatis/mappers/Professor_weight.xml" />
 		<mapper resource="mybatis/mappers/Diagnosis_criteria.xml" />
 		<mapper resource="mybatis/mappers/Mypage.xml" />
+		<mapper resource="mybatis/mappers/Scholar_Evaluation.xml"/>
 		<!-- 진로정체감 및 진로개발준비도 검사-->
 		
 

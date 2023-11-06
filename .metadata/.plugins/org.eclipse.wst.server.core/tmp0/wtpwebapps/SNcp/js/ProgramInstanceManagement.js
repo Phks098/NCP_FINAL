@@ -25,11 +25,11 @@ function updateInstance(item) {
 		"start_day=" + start_day + "&" +
 		"end_day=" + end_day;
 
-	location.href = "registerProgramInst?" + parameter;
+	location.href = "./registerProgramInst?" + parameter;
 }
 
 function createInstance() {
 	let parameter = "code=" + programCode;
 
-	location.href = "registerProgramInst?" + parameter;
+	location.href = "./registerProgramInst?" + parameter;
 }

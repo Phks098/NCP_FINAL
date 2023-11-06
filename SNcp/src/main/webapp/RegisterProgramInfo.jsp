@@ -47,7 +47,7 @@
 									<tr>
 										<th>프로그램 코드</th>
 										<td><input id="code" type="text" name="code"
-											value="${program.code}" /></td>
+											value="${program.code }" readonly="readonly" /></td>
 										<th>프로그램 명</th>
 										<td><input id="program_name" type="text"
 											name="program_name" value="${program.program_name }" /></td>
@@ -86,7 +86,7 @@
 													<c:choose>
 														<c:when
 															test="${largeCategory.code eq program.category_large}">
-															<option value="${largeCategory.code}" selected>
+															<option value="${largeCategory.code }" selected>
 																<c:out value="${largeCategory.category_name }" />
 															</option>
 														</c:when>
@@ -122,12 +122,12 @@
 												<c:forEach items="${ncsList}" var="ncs" varStatus="status">
 													<c:choose>
 														<c:when test="${ncs.code eq program.related_NCS_part}">
-															<option value="${ncs.code}" selected>
+															<option value="${ncs.code }" selected>
 																<c:out value="${ncs.category_name }" />
 															</option>
 														</c:when>
 														<c:otherwise>
-															<option value="${ncs.code}">
+															<option value="${ncs.code }">
 																<c:out value="${ncs.category_name }" />
 															</option>
 														</c:otherwise>

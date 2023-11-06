@@ -105,16 +105,12 @@ function createList(accordion, data){
 	let gotoCompetency = document.createElement("a");
 	gotoCompetency.setAttribute("href", "Professr_Career?university_number=" + data['university_number']);
 	gotoCompetency.innerText = "역량평가";
-	
-	let gotoIdentity   = document.createElement("a");
-	gotoIdentity.setAttribute("href", "mypage?student=" + data['university_number']);
-	gotoIdentity.innerText = "정체감평가";
-	
+
 	
 	div.appendChild(table);
 	div.appendChild(gotoStudentInformation);
 	div.appendChild(gotoCompetency);
-	div.appendChild(gotoIdentity);
+
 	
 	accordion.appendChild(div);
 	

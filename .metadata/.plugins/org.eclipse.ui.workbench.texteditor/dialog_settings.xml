@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="classList"/>
+		<item key="selection" value="participation_number"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="classList"/>
-			<item value="contents-info"/>
-			<item value="btnSetting"/>
-			<item value="wegight_Value"/>
-			<item value="updatePreferenceInformation"/>
-			<item value="ss"/>
-			<item value="Capability_Matching_Score"/>
-			<item value="professor_weight"/>
-			<item value="professor_weight[i]"/>
-			<item value="insert_Career_test"/>
-			<item value="delete_Preparation_Level"/>
-			<item value="delete_Integration_Score"/>
-			<item value="delete_Capability_Matching_score"/>
-			<item value="delete_Career_Test"/>
-			<item value="myPage"/>
+			<item value="participation_number"/>
+			<item value="participation_number_doc"/>
+			<item value="operating_result"/>
+			<item value="operating_result_doc"/>
+			<item value="department_number_doc"/>
+			<item value="department_number"/>
+			<item value="college_number_doc"/>
+			<item value="college_number"/>
+			<item value="registerProgramInst"/>
+			<item value="college_information_list"/>
+			<item value="college_information"/>
+			<item value="insertProgramInstance"/>
+			<item value="updateProgramInstance"/>
+			<item value="var college_number = college_number_doc.options[college_number_doc.selectedIndex].value;"/>
+			<item value="DOM"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1121"/>
-		<item key="DIALOG_Y_ORIGIN" value="458"/>
+		<item key="DIALOG_X_ORIGIN" value="2461"/>
+		<item key="DIALOG_Y_ORIGIN" value="680"/>
 		<item key="DIALOG_WIDTH" value="322"/>
-		<item key="DIALOG_HEIGHT" value="433"/>
+		<item key="DIALOG_HEIGHT" value="295"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>
