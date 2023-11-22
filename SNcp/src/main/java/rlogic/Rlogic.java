@@ -102,7 +102,7 @@ public class Rlogic {
 			Program_Information_VO pInfo = programUtils.getProgram_Inforamtion(pInst.getCode());
 			
 			//점수를 계산한다.
-			// student ㅅ학번에, 하위 3개의 역량 정보,preferenceInfo: 학생 선호 조건 , pInst: 하나의 비교과 프로그램 정보
+			//  student= 학번에 해당하는 학생의 , 하위 3개의 역량 정보,preferenceInfo: 학생 선호 조건 , pInst: 하나의 비교과 프로그램 정보
 			float score = getRecommendedScore(student, preLevel, preferenceInfo, pInst, pInfo);
 			System.out.println(score);
 			if (score != -1) {
@@ -144,6 +144,7 @@ public class Rlogic {
 		return results;
 	}
 
+	// 적합도를 계산하는 로직이다...
 	public float getRecommendedScore(Student_VO student, List<Preparation_Level_VO> preLevel,
 		Preference_Information_VO preferenceInfo, Program_Instance_VO pInst, Program_Information_VO pInfo) 
 	{

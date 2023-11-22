@@ -70,7 +70,8 @@ public class Program_DAO {
 
 	public static int insertProgram_Instance(Program_Instance_VO programInstance) {
 		int result = -1;
-
+		System.out.println("insertProgram_Instance()");
+		System.out.println(programInstance.toString());
 		sqlMapper = getInstance();
 		SqlSession session = sqlMapper.openSession();
 

@@ -35,6 +35,7 @@ public class Instance extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("doPost, /programs/instance :start");
 		String code = request.getParameter("code");
 		String open_type = request.getParameter("open_type");
 		String open_year = request.getParameter("open_year");

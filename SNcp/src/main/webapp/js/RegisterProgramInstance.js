@@ -180,7 +180,7 @@ function insertProgramInstance() {
 
 	console.log(parameter);
 
-	request.open("Post", "programs/instance?" + parameter, true);
+	request.open("Post", "/programs/instance?" + parameter, true);
 	request.onreadystatechange = insertProcess;
 	request.send(null);
 }
@@ -190,7 +190,7 @@ function updateProcess() {
 	var code = code_doc.value;
 
 	if (request.readyState == 4 && request.status == 200) {
-		location.href = "./programInstanceManagement?code=" + code;
+		location.href = "/programInstanceManagement?code=" + code;
 	} else {
 		btnRegister.disabled = true;
 		btnRegister.style.backgroundColor = "#D94D4D";
@@ -202,7 +202,7 @@ function insertProcess() {
 	var code = code_doc.value;
 
 	if (request.readyState == 4 && request.status == 200) {
-		location.href = "./programInstanceManagement?code=" + code;
+		location.href = "/programInstanceManagement?code=" + code;
 	} else {
 		btnRegister.disabled = true;
 		btnRegister.style.backgroundColor = "#D94D4D";
